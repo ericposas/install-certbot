@@ -10,6 +10,7 @@ sudo certbot --nginx
 
 # after install
 echo "after SSL installation, comment out the previous nginx server block in '/etc/nginx/sites-enabled/default'"
+echo "also, restart nginx! sudo systemctl restart nginx"
 echo "also, be sure to allow port 443 in your AWS instance!"
 
 # to test renew 
