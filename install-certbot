@@ -8,6 +8,10 @@ sudo apt-get update
 sudo apt-get install certbot python-certbot-nginx -y
 sudo certbot --nginx
 
+# after install
+echo "after SSL installation, comment out the previous nginx server block in '/etc/nginx/sites-enabled/default'"
+echo "also, be sure to allow port 443 in your AWS instance!"
+
 # to test renew 
 # sudo certbot renew --dry-run
 
