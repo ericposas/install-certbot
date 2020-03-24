@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo "be sure to add yoursite.com, www.yoursite.com, and any other subdomains that you want protected by SSL. If you don't, you'll get a big ugly yellow warning box when users visit your site! Ok? [y/n]"
+read ok
+
+if [[ "$ok" != "y" ]]; then
+  exit
+fi
+
 sudo apt-get update
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository universe
